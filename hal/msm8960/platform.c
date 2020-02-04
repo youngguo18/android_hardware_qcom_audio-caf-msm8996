@@ -23,7 +23,7 @@
 
 #include <stdlib.h>
 #include <dlfcn.h>
-#include <cutils/log.h>
+#include <log/log.h>
 #include <cutils/properties.h>
 #include <audio_hw.h>
 #include <platform_api.h>
@@ -1250,6 +1250,12 @@ bool platform_send_gain_dep_cal(void *platform __unused,
 void platform_set_gsm_mode(void *platform __unused, bool enable __unused)
 {
     ALOGE("%s: Not implemented", __func__);
+}
+
+int platform_set_snd_device_name(snd_device_t snd_device __unused,
+                                 const char * name __unused)
+{
+    return -ENOSYS;
 }
 
 bool platform_can_enable_spkr_prot_on_device(snd_device_t snd_device __unused)

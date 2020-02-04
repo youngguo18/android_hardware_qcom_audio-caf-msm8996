@@ -33,7 +33,7 @@
 
 #include <errno.h>
 #include <math.h>
-#include <cutils/log.h>
+#include <log/log.h>
 #include <fcntl.h>
 #include <dirent.h>
 #include "audio_hw.h"
@@ -43,6 +43,7 @@
 #include <stdlib.h>
 #include <dlfcn.h>
 #include <math.h>
+#include <pthread.h>
 #include <cutils/properties.h>
 #include "audio_extn.h"
 #include "audio_hw.h"
